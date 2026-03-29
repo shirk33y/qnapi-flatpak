@@ -17,16 +17,16 @@ modules:
     subdir: Project/CMake
     sources:
       - type: archive
-        url: https://mediaarea.net/download/source/libzen/0.4.41/libzen_0.4.41.tar.bz2
-        sha256: eb237d7d3dca6dc6ba068719420a27de0934a783ccaeb2867562b35af3901e2d
+        url: https://github.com/MediaArea/ZenLib/archive/refs/tags/v0.4.41.tar.gz
+        sha256: 45d5173fa0278f5264daa6836ae297aa303984482227d00b35c4f03929494c8f
 
   - name: libmediainfo
     buildsystem: cmake-ninja
     subdir: Project/CMake
     sources:
       - type: archive
-        url: https://mediaarea.net/download/source/libmediainfo/23.11/libmediainfo_23.11.tar.bz2
-        sha256: 444d1001601921eb99a7738ac02937ccc743fcd82878ae5b4a67320986af6441
+        url: https://github.com/MediaArea/MediaInfoLib/archive/refs/tags/v23.11.tar.gz
+        sha256: 283dd5608b72fb21cfbf1ce55f6bb803ba5987e1cf38f2c0b8ff11b1864d1edb
 
   - name: qnapi
     buildsystem: qmake
