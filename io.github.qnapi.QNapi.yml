@@ -44,6 +44,8 @@ modules:
       - type: archive
         url: https://github.com/QNapi/qnapi/archive/refs/tags/0.2.3.tar.gz
         sha256: c0f4dfdef653a6c6eb90e110a85b6cf41e03d9dc91c3a0cbd48e498d3dcb3729
+      - type: patch
+        path: 0001-fix-missing-QIcon-include-for-Qt-5.15.patch
       - type: archive
         url: https://github.com/wiedi/libmaia/archive/e930451632ed7532a5a3ca231669bfb00a3ebb9e.tar.gz
         sha256: edb8e7a97b9faa61dc2b3cbb13b337fbb56c6637e5bd19579588c3f64edef585
