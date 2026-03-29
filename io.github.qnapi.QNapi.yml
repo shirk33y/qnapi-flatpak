@@ -44,3 +44,13 @@ modules:
       - type: archive
         url: https://github.com/QNapi/qnapi/archive/refs/tags/0.2.3.tar.gz
         sha256: c0f4dfdef653a6c6eb90e110a85b6cf41e03d9dc91c3a0cbd48e498d3dcb3729
+      - type: archive
+        url: https://github.com/wiedi/libmaia/archive/e930451632ed7532a5a3ca231669bfb00a3ebb9e.tar.gz
+        sha256: edb8e7a97b9faa61dc2b3cbb13b337fbb56c6637e5bd19579588c3f64edef585
+        dest: deps/libmaia
+        strip-components: 1
+      - type: archive
+        url: https://github.com/QNapi/qt-maybe/archive/52b21af10535d781a2eef8c0f5874d14a64eedcc.tar.gz
+        sha256: bccc49658648ab5e755a6584d8ee8f3e374c4f152de45e48bb4cc6decdc8f654
+        dest: deps/qt-maybe
+        strip-components: 1
