@@ -23,16 +23,19 @@ modules:
   - name: libmediainfo
     buildsystem: cmake-ninja
     subdir: Project/CMake
+    config-opts:
+      - -DCMAKE_DISABLE_FIND_PACKAGE_CURL=TRUE
     sources:
       - type: archive
         url: https://github.com/MediaArea/MediaInfoLib/archive/refs/tags/v23.11.tar.gz
         sha256: 283dd5608b72fb21cfbf1ce55f6bb803ba5987e1cf38f2c0b8ff11b1864d1edb
 
   - name: qnapi
-    buildsystem: qmake
-    config-opts:
-      - CONFIG+=release
-    post-install:
+    buildsystem: simple
+    build-commands:
+      - qmake CONFIG+=release INSTALL_PREFIX=/app DATADIR=/app/share
+      - make -j$FLATPAK_BUILDER_N_JOBS
+      - install -Dm755 qnapi /app/bin/qnapi
       - install -Dm644 doc/qnapi.desktop /app/share/applications/io.github.qnapi.QNapi.desktop
       - desktop-file-edit --set-key=Icon --set-value=io.github.qnapi.QNapi /app/share/applications/io.github.qnapi.QNapi.desktop
       - install -Dm644 gui/res/icons/16x16/apps/qnapi.png /app/share/icons/hicolor/16x16/apps/io.github.qnapi.QNapi.png
