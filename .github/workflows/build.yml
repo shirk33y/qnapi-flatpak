@@ -22,3 +22,22 @@ jobs:
           bundle: qnapi.flatpak
           manifest-path: io.github.qnapi.QNapi.yml
           cache-key: flatpak-builder-${{ github.sha }}
+
+      - name: Create Release
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v0.2.3-build${{ github.run_number }}
+          name: QNapi 0.2.3 (build ${{ github.run_number }})
+          body: |
+            Flatpak build of QNapi 0.2.3.
+
+            **Install:**
+            ```bash
+            flatpak install qnapi.flatpak
+            flatpak run io.github.qnapi.QNapi
+            ```
+
+            Bundled: 7-zip 26.00 static binary (`/app/bin/7z`)
+          files: qnapi-x86_64.flatpak/qnapi.flatpak
+          make_latest: true
