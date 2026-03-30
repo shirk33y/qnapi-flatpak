@@ -4,7 +4,7 @@ Flatpak manifest for [QNapi](https://github.com/QNapi/qnapi) — a subtitle down
 
 ## Install
 
-Download the latest `qnapi.flatpak` from [Actions artifacts](https://github.com/shirk33y/qnapi-flatpak/actions) and install:
+Download the latest `qnapi.flatpak` from [Releases](https://github.com/shirk33y/qnapi-flatpak/releases/latest) and install:
 
 ```bash
 flatpak install qnapi.flatpak
